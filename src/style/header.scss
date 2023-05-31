@@ -1,0 +1,20 @@
+.header{
+  padding: 20px 0;
+  border-bottom: 3px solid #35383f;
+  &__link{
+    color: #84a0ef;
+    font-weight: 700;
+    font-size: 29px;
+  }
+  &__nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  &__title{
+    font-weight: 700;
+    font-size: 28px;
+  }
+}
