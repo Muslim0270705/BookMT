@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "email": "magezamuslim40@gmail.com",
+      "password": "$2a$10$TQxBpImZNj6LxJwZq698WekDW0EMnNyBBZMGSUsbHtSD5Dm6XxGHO",
+      "id": 1
+    },
+    {
+      "email": "magezamuslim26@gmail.com",
+      "password": "$2a$10$oFzP1FXc6iEa8xTi0mxXquMLc5i.GT7Ze69gSUZasn8dQObHjTqXq",
+      "id": 2
+    }
+  ]
+}

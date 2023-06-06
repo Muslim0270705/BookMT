@@ -1,5 +1,5 @@
 
-import {Routes, Route, MemoryRouter} from 'react-router-dom'
+import {Routes, Route} from 'react-router-dom'
 import Layout from "./Layout/Layout";
 import Home from "./pages/Home/Home";
 import "./style/style.scss"
@@ -36,6 +36,10 @@ import DifferentialTwo from "./pages/Differential/DifferentialTwo";
 import DifferentialTree from "./pages/Differential/DifferentialTree";
 import DifferentialFour from "./pages/Differential/DifferentialFour";
 import Mathematics from "./pages/Home/Mathematics";
+import Register from "./pages/Register/Register";
+
+import Login from "./pages/Input/Input";
+
 function App() {
   return (
       <div className="App" >
@@ -75,8 +79,9 @@ function App() {
                 <Route path={"/DifferentialTree"} element={<DifferentialTree/>}/>
                 <Route path={"/DifferentialFour"} element={<DifferentialFour/>}/>
                 <Route path={"/Mathematics"} element={<Mathematics/>}/>
-
               </Route>
+            <Route path={"/reg"} element={<Register/>}/>
+            <Route path={"/login"} element={<Login/>}/>
           </Routes>
       </div>
   );

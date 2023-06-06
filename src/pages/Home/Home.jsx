@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 const Home = () => {
+
     return (
         <section className="home">
             <div className="container">
@@ -67,32 +69,53 @@ const Home = () => {
                             <li className='home__info-menu-gb-ds'><Link to="GeometrySix">Формулы для объема прямоугольного параллелепипеда и цилиндра</Link></li>
                         </ul>
                     </ul>
-                    <ul className="home__info-menu">
-                        <h2 className="home__info-menu-title">Глава 4: Вероятность и статистика</h2>
-                        <ul className="home__info-menu-gb">
-                            <li className='home__info-menu-gb-tl'><Link to="">4.1 Основы вероятности</Link></li>
-                            <li className='home__info-menu-gb-ds'><Link to="/ProbabilityOne">Эксперименты и исходы</Link></li>
-                            <li className='home__info-menu-gb-ds'><Link to="/ProbabilityTwo">Вероятность события</Link></li>
-                            <li className='home__info-menu-gb-ds'><Link to="/ProbabilityThree">Равновероятные исходы</Link></li>
-                        </ul>
-                        <ul className="home__info-menu-gb">
-                            <li className='home__info-menu-gb-tl'><Link to="/">4.2 Статистика</Link></li>
-                            <li className='home__info-menu-gb-ds'><Link to="/ProbabilityFour">Сбор и анализ данных</Link></li>
-                            <li className='home__info-menu-gb-ds'><Link to="/ProbabilityFive">Диаграммы и графики</Link></li>
-                            <li className='home__info-menu-gb-ds'><Link to="/ProbabilitySix">Среднее значение, медиана и мода</Link></li>
-                        </ul>
-                    </ul>
-                    <ul className="home__info-menu">
-                        <h2 className="home__info-menu-title">Глава 5: Дифференциальное и интегральное исчисление</h2>
-                        <ul className="home__info-menu-gb">
-                            <li className='home__info-menu-gb-tl'><Link to="/">5.1 Производные и дифференцирование</Link></li>
-                            <li className='home__info-menu-gb-ds'><Link to="/DifferentialOne">Пределы и непрерывность</Link></li>
-                            <li className='home__info-menu-gb-ds'><Link to="/DifferentialTwo">Производная функции</Link></li>
-                            <li className='home__info-menu-gb-ds'><Link to="/DifferentialTree">Правила дифференцирования</Link></li>
-                            <li className='home__info-menu-gb-ds'><Link to="/DifferentialFour">Производные элементарных функций</Link></li>
-                        </ul>
-                    </ul>
+                    {
+                        JSON.parse(localStorage.getItem("user")) ?
+                            <>
+
+                            <ul className="home__info-menu">
+                                <h2 className="home__info-menu-title">Глава 4: Вероятность и статистика</h2>
+                                <ul className="home__info-menu-gb">
+                                    <li className='home__info-menu-gb-tl'><Link to="">4.1 Основы вероятности</Link></li>
+                                    <li className='home__info-menu-gb-ds'><Link to="/ProbabilityOne">Эксперименты и
+                                        исходы</Link></li>
+                                    <li className='home__info-menu-gb-ds'><Link to="/ProbabilityTwo">Вероятность
+                                        события</Link></li>
+                                    <li className='home__info-menu-gb-ds'><Link to="/ProbabilityThree">Равновероятные
+                                        исходы</Link></li>
+                                </ul>
+                                <ul className="home__info-menu-gb">
+                                    <li className='home__info-menu-gb-tl'><Link to="/">4.2 Статистика</Link></li>
+                                    <li className='home__info-menu-gb-ds'><Link to="/ProbabilityFour">Сбор и анализ
+                                        данных</Link></li>
+                                    <li className='home__info-menu-gb-ds'><Link to="/ProbabilityFive">Диаграммы и
+                                        графики</Link></li>
+                                    <li className='home__info-menu-gb-ds'><Link to="/ProbabilitySix">Среднее значение,
+                                        медиана и мода</Link></li>
+                                </ul>
+                            </ul>
+                            <ul className="home__info-menu">
+                                <h2 className="home__info-menu-title">Глава 5: Дифференциальное и интегральное
+                                    исчисление</h2>
+                                <ul className="home__info-menu-gb">
+                                    <li className='home__info-menu-gb-tl'><Link to="/">5.1 Производные и
+                                        дифференцирование</Link></li>
+                                    <li className='home__info-menu-gb-ds'><Link to="/DifferentialOne">Пределы и
+                                        непрерывность</Link></li>
+                                    <li className='home__info-menu-gb-ds'><Link to="/DifferentialTwo">Производная
+                                        функции</Link></li>
+                                    <li className='home__info-menu-gb-ds'><Link to="/DifferentialTree">Правила
+                                        дифференцирования</Link></li>
+                                    <li className='home__info-menu-gb-ds'><Link to="/DifferentialFour">Производные
+                                        элементарных функций</Link></li>
+                                </ul>
+                            </ul>
+                            </> : <h2 className="header__link" style={{color:"gray"}}>
+                                Войдите или зарегистрируйтесь что бы иметь доступ к новым урокам
+                            </h2>
+                    }
                 </div>
+
 
 
             </div>

@@ -1,11 +1,15 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 
+
+
 const Footer = () => {
+
     return (
         <header className="header">
             <div className="container">
                 <div className="header__nav">
+
                     <div>
                         <Link to="/" style={{color:"white"}}>
                             <h1 className="header__title">
@@ -21,11 +25,11 @@ const Footer = () => {
                         Математика
                     </Link>
                     <div>
-                        <h2 className="header__title">
-                            Имя Фамилия
-
-                        </h2>
-
+                        <p> <span>
+                            Ваш email:
+                        </span>
+                              {JSON.parse(localStorage.getItem("user")) ? " " +JSON.parse(localStorage.getItem("user")).email : ""}
+                        </p>
                     </div>
 
 
